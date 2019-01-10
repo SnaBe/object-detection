@@ -2,7 +2,7 @@
 # Simon S. Sørensen
 # Detect a specific object within a live video feed
 
-# Import OpenCV (cv2) & numpy as np, use pip to install
+# Import OpenCV (cv2), use pip to install
 import cv2
 # Our object cascade from a given path
 object_cascade = cv2.CascadeClassifier('./cascades/haarcascade_frontalface_default.xml')
