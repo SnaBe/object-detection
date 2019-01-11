@@ -1,6 +1,6 @@
 # object-detection
 
-Detect objects in images, video feed and games using OpenCV (Open Source Computer Vision Library) & Python 3. Here's a list of the different scripts. 
+Detect objects in images, video feed and games using OpenCV (Open Source Computer Vision Library) & Python 3. Here's a list of the current scripts. Some are incomplete or for specific platforms.
 
 ### 1. Images can be JPEG, JPG, PNG or other commonly used image file types.
 
@@ -8,11 +8,31 @@ Add our images file path
 ```
 my_image = cv2.imread('./images/harry-meghan.jpg')
 ```
-Run the scripts
+Run the image script 
 
 ```
 $ py image_object_detection.py
 ```
-Video feed can come trough USB or camera modules. 
+### 2. Video feed can come trough USB or camera modules. 
 
-Game capture is taken from a specific point on the primary screen.
+Our default video camera for capture (Tested on Winndows, Mac & Linux)
+```
+video_capture = cv2.VideoCapture(0)
+```
+Pi Camera module (Tested on Raspberry Pi 3 B & B+)
+```
+# PiCam settings
+camera = PiCamera()
+camera.resolution(640, 360)
+camera.framerate(30)
+
+# Video capture
+video_capture = PiRGBArray(camera, (640, 360))
+```
+Run the picam script 
+
+```
+$ py video_object_detection_with_picam.py
+```
+
+### 3. Game capture is taken from a specific position on the primary screen.
