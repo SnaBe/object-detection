@@ -1,6 +1,6 @@
 # 27-12-2018
 # Simon S. Sørensen
-# Detect a specific object within a given image
+# Detect a specific object within a given image, in this case its faces.
 
 # Import OpenCV (cv2), use pip to install
 import cv2
