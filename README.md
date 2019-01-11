@@ -4,7 +4,7 @@ Detect objects in images, video feed and games using OpenCV (Open Source Compute
 
 ### 1. Images can be JPEG, JPG, PNG or other commonly used image file types.
 
-Add our images file path
+Add our images file path (Tested on Windows & Linux)
 ```
 my_image = cv2.imread('./images/harry-meghan.jpg')
 ```
@@ -36,3 +36,13 @@ $ py video_object_detection_with_picam.py
 ```
 
 ### 3. Game capture is taken from a specific position on the primary screen.
+
+Our game screen to capture (Tested on Winndows)
+```
+game_screen = np.array(ImageGrab.grab(bbox=(0, 0, 800, 600)))
+```
+Run the game script 
+
+```
+$ py game_object_detection.py
+```
