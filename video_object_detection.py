@@ -1,6 +1,6 @@
 # 27-12-2018
 # Simon S. Sørensen
-# Detect a specific object within a live video feed
+# Detect a specific object within a live video feed, in this case its faces.
 
 # Import OpenCV (cv2), use pip to install modules
 import cv2
