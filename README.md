@@ -19,7 +19,7 @@ Our default video camera for capture (Tested on Winndows, Mac & Linux)
 ```
 video_capture = cv2.VideoCapture(0)
 ```
-Pi Camera module (Tested on Raspberry Pi 3 B & B+)
+Pi Camera module (Tested on Raspberry Pi 3 B+)
 ```
 # PiCam settings
 camera = PiCamera()
