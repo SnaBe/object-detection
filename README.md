@@ -1,6 +1,6 @@
 # object-detection
 
-Detect specific objects in images, video feed and games using OpenCV (Open Source Computer Vision Library) & Python 3. Here's a list of the current scripts. Some are incomplete or for specific platforms.
+Detect specific objects in images, video feed and games using [OpenCV ](https://opencv.org/ "Opencv.org") (Open Source Computer Vision Library) & [Python 3](https://www.python.org/downloads/ "Python.org"). Here's a list of the current scripts. Some are incomplete or for specific platforms.
 
 ### 1. Images can be JPEG, JPG, PNG or other commonly used image file types.
 
