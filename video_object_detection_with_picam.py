@@ -1,4 +1,4 @@
-# 7-01-2018
+# 07-01-2018
 # Simon S. Sørensen
 # Detect a specific object within a live video feed from a PiCam
 
