@@ -1,3 +1,7 @@
+# 02-01-2018
+# Simon S. Sørensen
+# Detect a specific object within a live video feed, in this case its faces.
+
 # Import OpenCV (cv2) & numpy as np
 import cv2
 import numpy as np
