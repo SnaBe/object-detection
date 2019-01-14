@@ -32,7 +32,7 @@ video_capture = PiRGBArray(camera, (640, 360))
 Run the picam script 
 
 ```
-$ py video_object_detection_with_picam.py
+$ python video_object_detection_with_picam.py
 ```
 
 ### 3. Game capture is taken from a specific position on the primary screen.
