@@ -11,31 +11,33 @@ from picamera.array import PiRGBArray
 # Our object cascade from a given path
 object_cascade = cv2.CascadeClassifier('./cascades/haarcascade_frontalface_default.xml')
 
+width = 1280
+height = 720
+
 # PiCam settings
 camera = PiCamera()
-camera.resolution(640, 360)
-camera.framerate(30)
-
+camera.resolution = (width, height)
+camera.framerate = 30
 # Video capture
-video_capture = PiRGBArray(camera, (640, 360))
+video_capture = PiRGBArray(camera, size=(width, height))
 
 # Let the camera warm up
 sleep(0.1)
 
 # Start video frame capture
-for still in camera.capture_continous(video_capture, format='bgr', use_video_port=True):
+for still in camera.capture_continuous(video_capture, format='bgr', use_video_port=True):
     # Frame as an array
-    image = still.array()
+    image = still.array
     # Convert image to gray scale
     gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
     # Detecting facial features
-    faces = object_cascade.detectMultiScale(gray_image, scaleFactor=1.1, minNeighbors=5, minSize=(35, 35), flags=cv2.cv.CV_HAAR_SCALE_IMAGE)
+    faces = object_cascade.detectMultiScale(gray_image, scaleFactor=1.1, minNeighbors=5, minSize=(30, 30))
     # Drawing a rectangle around the detected face
     for(x, y, w, h) in faces:
         # Draw the rectangle
         cv2.rectangle(image, (x, y), (x+w, y+h), (0, 255, 0), 2)
         # Text placeholder
-        cv2.rectangle(image, (x, y), (x + 48, y + 20), (0, 255, 0), cv2.FILLED)
+        cv2.rectangle(image, (x, y), (x + 48, y + 26), (0, 255, 0), cv2.FILLED)
         # Draw text
         cv2.putText(image, 'Face', (x + 5, y + 15), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 1)
 
