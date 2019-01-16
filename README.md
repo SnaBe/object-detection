@@ -23,11 +23,10 @@ Pi Camera module (Tested on Raspberry Pi 3 B+)
 ```
 # PiCam settings
 camera = PiCamera()
-camera.resolution(640, 360)
-camera.framerate(30)
-
+camera.resolution = (width, height)
+camera.framerate = 30
 # Video capture
-video_capture = PiRGBArray(camera, (640, 360))
+video_capture = PiRGBArray(camera, size=(width, height))
 ```
 Run the picam script 
 
