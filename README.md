@@ -25,6 +25,7 @@ Pi Camera module (Tested on Raspberry Pi 3 B+)
 camera = PiCamera()
 camera.resolution = (width, height)
 camera.framerate = 30
+
 # Video capture
 video_capture = PiRGBArray(camera, size=(width, height))
 ```
